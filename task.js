@@ -2,21 +2,25 @@ let username = prompt("Enter your username:");
 let password;
 let attempts = 5;
 
-let resultElement = document.getElementById("result");
-
 while (attempts > 0) 
 {
     password = prompt("Enter your password:");
 
-    if (password === "123") {
-        resultElement.innerText = `Welcome, ${username}!`;
+    if (password === "123") 
+    {
+        alert(`Welcome, ${username}`);
         break; 
-    } else {
+    } 
+    else 
+    {
         attempts--;
-        if (attempts > 0) {
-            resultElement.innerText = `Incorrect password. You have ${attempts} attempts left.`;
-        } else {
-            resultElement.innerText = "Please try again later.";
+        if (attempts > 0) 
+        {
+            alert(`Incorrect password. You have ${attempts} attempts left.`);
+        } 
+        else 
+        {
+            alert("Please try again later.");
         }
     }
 }
